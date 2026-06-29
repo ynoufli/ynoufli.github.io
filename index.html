@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Votre Nom - Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Polices Google (Raleway) -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- Frameworks CSS (Liens CDN pour un affichage immédiat sans télécharger de fichiers) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+
+  <!-- Votre style personnalisé -->
+  <style>
+    body {
+      margin-top: 5%;
+    }
+    .hidelink {
+      text-decoration: none;
+      color: #333; /* Couleur des liens par défaut */
+    }
+    .hidelink:hover {
+      color: #1EAEDB; /* Couleur au survol */
+    }
+    /* Style pour les petits boutons façon tags */
+    .button-link {
+      background-color: transparent;
+      color: gray;
+      border: 1px solid gray;
+      padding: 4px 8px;
+      text-decoration: none;
+      font-size: 11px;
+      border-radius: 3px;
+      cursor: pointer;
+      display: inline-block;
+      margin-left: 5px;
+    }
+    .button-link:hover {
+      color: #1EAEDB;
+      border-color: #1EAEDB;
+    }
+    /* Remplacement des anciennes balises <font> */
+    .title-highlight { color: #cc7000; }
+    .status-highlight { color: #00008B; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <!-- Section 1 : En-tête et Présentation -->
+    <div class="row">
+      <div class="seven columns">
+        <h1>Votre Prénom Nom</h1>
+        <h6>Votre Titre (ex: Étudiant, Développeur, Chercheur)</h6>
+        <h5> 
+          <a class="hidelink" href="#">Votre Département</a> <br>
+          <a class="hidelink" href="#">Votre École / Entreprise</a>
+        </h5>
+        
+        <p>
+          <b>Contact</b> : votre.email [at] domaine.com <br>
+          <b>CV</b> : <a class="hidelink" href="#">PDF</a> <br>
+          <a class="hidelink" href="#">LinkedIn</a> | 
+          <a class="hidelink" href="#">GitHub</a>
+        </p>
+        
+        <h5>À propos de moi</h5> 
+        <p>
+          Je suis actuellement [Votre profession/statut] à [Lieu]. Avant cela, j'ai été diplômé de [Nom de l'école]. N'hésitez pas à me contacter si vous avez des questions concernant mon parcours ou pour toute autre demande.
+        </p>
+      </div>
+      
+      <!-- Section 2 : Photo de profil -->
+      <div class="five columns">
+        <!-- Remplacez le lien de l'image ci-dessous par votre propre photo -->
+        <img src="https://via.placeholder.com/400x400" alt="Ma photo de profil" style="width: 100%; border-radius: 4px;">
+      </div>
+    </div>
+
+    <!-- Section 3 : Contenu principal (Publications, Projets, etc.) -->
+    <div class="row">
+      <div class="twelve columns">
+        
+        <hr>
+        <h5>Projets & Publications</h5>
+        <ul>
+          <li> 
+            <strong><span class="title-highlight">Titre de votre projet ou publication</span></strong>. <i><span class="status-highlight">Statut (ex: Terminé)</span>.</i>
+            <br>Avec [Noms des collaborateurs]. 
+            <a class="hidelink" href="#">
+              <span class="button-link">Lien vers le projet</span>
+            </a> 
+          </li>
+          <li> 
+            <strong><span class="title-highlight">Un deuxième projet très intéressant</span></strong>. <i><span class="status-highlight">En cours</span>.</i>
+            <br>Courte description de ce que vous faites dans ce projet.
+            <ul>
+              <li>⭐ <i>Récompense : Prix du meilleur projet 2025.</i></li>
+            </ul>
+          </li>
+        </ul>
+
+        <hr>
+        <h5>Expériences / Enseignement</h5>
+        <ul>
+          <li>
+            <strong>Intitulé du poste | Rôle</strong>
+            <br>Lieu, Période (ex: Printemps 2026).
+            <br>Description rapide de vos missions et réalisations.
+          </li>
+        </ul>
+
+        <hr>
+        <h5>Ressources Utiles</h5>
+        <ul>
+          <li>
+            <a class="hidelink" href="#"><strong>Nom de votre ressource ou site web</strong></a>
+            <br>
+            Une phrase expliquant pourquoi cette ressource est utile et ce qu'on y trouve.
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
