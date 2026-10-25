@@ -1,758 +1,171 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <title>Younes Noufli</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Younes Noufli | Data Science & AI</title>
-  <meta name="description" content="Younes Noufli, ENSIAS engineering student interested in data science, machine learning and AI research.">
-  <meta name="author" content="Younes Noufli">
-  <meta name="theme-color" content="#ffffff">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
 
   <style>
-    :root {
-      --bg: #ffffff;
-      --text: #242424;
-      --muted: #696969;
-      --line: #e7e7e7;
-      --accent: #315b49;
-      --soft: #f6f7f5;
-      --width: 900px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 24px;
-    }
-
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 16px;
-      line-height: 1.75;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration-thickness: 1px;
-      text-underline-offset: 3px;
-    }
-
-    a:hover {
-      color: var(--text);
-    }
-
-    a:focus-visible {
-      outline: 2px solid var(--accent);
-      outline-offset: 4px;
-    }
-
-    .page {
-      width: min(var(--width), calc(100% - 48px));
-      margin: 0 auto;
-    }
-
-    /* Navigation */
-
-    .navigation {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      padding: 22px 0;
-      border-bottom: 1px solid var(--line);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 13px;
-    }
-
-    .brand {
-      color: var(--text);
+    body { margin-top: 5%; margin-bottom: 5%; }
+    .hidelink { text-decoration: none; color: #333; }
+    .hidelink:hover { color: #1EAEDB; }
+    .button-link {
+      background-color: transparent;
+      color: gray;
+      border: 1px solid gray;
+      padding: 4px 8px;
       text-decoration: none;
-      font-weight: 700;
-      letter-spacing: -0.3px;
-    }
-
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .nav-links a {
-      color: var(--muted);
-      text-decoration: none;
-    }
-
-    .nav-links a:hover {
-      color: var(--accent);
-    }
-
-    /* Introduction */
-
-    .hero {
-      display: grid;
-      grid-template-columns: 1fr 210px;
-      gap: 48px;
-      align-items: center;
-      padding: 76px 0 64px;
-    }
-
-    .eyebrow,
-    .section-number,
-    .meta,
-    .tag,
-    .footer {
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .eyebrow {
-      color: var(--accent);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 1.6px;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      margin: 12px 0 8px;
-      font-size: clamp(38px, 6vw, 56px);
-      font-weight: 400;
-      letter-spacing: -2px;
-      line-height: 1.12;
-    }
-
-    .subtitle {
-      margin: 0 0 22px;
-      color: var(--muted);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 15px;
-    }
-
-    .intro {
-      max-width: 610px;
-      margin: 0 0 24px;
-      font-size: 17px;
-    }
-
-    .contact-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px 20px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 13px;
-    }
-
-    .portrait-placeholder {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 190px;
-      height: 220px;
-      margin: auto;
-      border: 1px solid var(--line);
-      background: var(--soft);
-      color: var(--muted);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 12px;
-      text-align: center;
-    }
-
-    /* Sections */
-
-    section {
-      padding: 40px 0;
-      border-top: 1px solid var(--line);
-    }
-
-    .section-heading {
-      display: grid;
-      grid-template-columns: 155px 1fr;
-      gap: 30px;
-      margin-bottom: 28px;
-    }
-
-    .section-number {
-      padding-top: 6px;
-      color: var(--muted);
       font-size: 11px;
-      letter-spacing: 1.3px;
-      text-transform: uppercase;
-    }
-
-    h2 {
-      margin: 0;
-      font-size: 27px;
-      font-weight: 400;
-      letter-spacing: -0.6px;
-      line-height: 1.3;
-    }
-
-    h3 {
-      margin: 0;
-      font-size: 19px;
-      font-weight: 400;
-      line-height: 1.4;
-    }
-
-    h4 {
-      margin: 0 0 8px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 13px;
-      font-weight: 700;
-    }
-
-    .section-content {
-      margin-left: 185px;
-    }
-
-    .muted {
-      color: var(--muted);
-    }
-
-    /* Research interests */
-
-    .interest-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 18px 0;
-    }
-
-    .tag {
-      padding: 5px 10px;
-      border: 1px solid var(--line);
       border-radius: 3px;
-      color: #454545;
-      font-size: 12px;
+      cursor: pointer;
+      display: inline-block;
+      margin-left: 5px;
     }
-
-    .note {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    /* Projects */
-
-    .project {
-      padding: 23px 0;
-      border-top: 1px solid var(--line);
-    }
-
-    .project:first-child {
-      padding-top: 0;
-      border-top: 0;
-    }
-
-    .project-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      flex-wrap: wrap;
-      gap: 8px 18px;
-      margin-bottom: 10px;
-    }
-
-    .meta {
-      color: var(--muted);
-      font-size: 11px;
-      letter-spacing: 0.6px;
-      text-transform: uppercase;
-    }
-
-    .project p {
-      margin: 8px 0;
-    }
-
-    .project-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px 18px;
-      margin-top: 12px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 13px;
-    }
-
-    /* Experience and education */
-
-    .timeline-item {
-      display: grid;
-      grid-template-columns: 125px 1fr;
-      gap: 20px;
-      padding: 17px 0;
-      border-top: 1px solid var(--line);
-    }
-
-    .timeline-item:first-child {
-      padding-top: 0;
-      border-top: 0;
-    }
-
-    .timeline-date {
-      color: var(--muted);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 12px;
-    }
-
-    .timeline-item p {
-      margin: 6px 0;
-    }
-
-    /* Skills */
-
-    .skill-row {
-      display: grid;
-      grid-template-columns: 145px 1fr;
-      gap: 20px;
-      padding: 12px 0;
-      border-top: 1px solid var(--line);
-    }
-
-    .skill-row:first-child {
-      border-top: 0;
-    }
-
-    .skill-label {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 13px;
-      font-weight: 700;
-    }
-
-    .skill-value {
-      margin: 0;
-      color: #454545;
-    }
-
-    /* Footer */
-
-    .footer {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 10px;
-      padding: 25px 0 35px;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    @media (max-width: 650px) {
-      .page {
-        width: calc(100% - 36px);
-      }
-
-      .navigation {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 12px;
-      }
-
-      .nav-links {
-        gap: 12px 17px;
-      }
-
-      .hero {
-        grid-template-columns: 1fr;
-        gap: 25px;
-        padding: 48px 0 40px;
-      }
-
-      .portrait-placeholder {
-        display: none;
-      }
-
-      .section-heading {
-        grid-template-columns: 1fr;
-        gap: 8px;
-        margin-bottom: 18px;
-      }
-
-      .section-content {
-        margin-left: 0;
-      }
-
-      .timeline-item {
-        grid-template-columns: 1fr;
-        gap: 4px;
-      }
-
-      .skill-row {
-        grid-template-columns: 1fr;
-        gap: 3px;
-      }
-
-      section {
-        padding: 30px 0;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-    }
+    .button-link:hover { color: #1EAEDB; border-color: #1EAEDB; }
+    .title-highlight { color: #cc7000; }
+    .status-highlight { color: #00008B; }
+    .meta { color: #777; font-size: 1.3rem; }
+    ul li { margin-bottom: 1.2rem; }
+    ul ul li { margin-bottom: 0.3rem; }
+    hr { margin-top: 2.5rem; margin-bottom: 2.5rem; }
   </style>
 </head>
-
 <body>
-  <div class="page">
+  <div class="container">
 
-    <header class="navigation">
-      <a class="brand" href="#top">Younes Noufli</a>
+    <div class="row">
+      <div class="seven columns">
+        <h1>Younes Noufli</h1>
+        <h6>Engineering student</h6>
+        <h5>
+          <a class="hidelink" href="#">Machine learning &amp; data science</a> <br>
+          <a class="hidelink" href="https://ensias.um5.ac.ma/">ENSIAS, Mohammed V University</a>
+        </h5>
 
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="#research">Research</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+        <p>
+          <b>Contact</b> : younes_noufli [at] um5.ac.ma <br>
+          <b>CV</b> : <a class="hidelink" href="https://drive.google.com/file/d/1kKypxUzSLVt_GO_9X96dJujinNV_JUaj/view?usp=sharing">PDF</a> <br>
+          <a class="hidelink" href="https://www.linkedin.com/in/younes-noufli-aab87b218/">LinkedIn</a>
+        </p>
 
-    <main id="top">
-
-      <!-- INTRODUCTION -->
-
-      <div class="hero">
-        <div>
-          <div class="eyebrow">Data Science · Artificial Intelligence</div>
-
-          <h1>Younes Noufli</h1>
-
-          <p class="subtitle">
-            Engineering student at ENSIAS, Mohammed V University
-          </p>
-
-          <p class="intro">
-            I am an engineering student at ENSIAS, Morocco, with a background
-            in mathematics, physics and computer science through the CPGE
-            preparatory program. My work and projects focus on machine
-            learning, data science and applied AI. I am particularly
-            interested in research questions around structured representations
-            and learning.
-          </p>
-
-          <div class="contact-links">
-            <a href="mailto:younes_noufli@um5.ac.ma">Email</a>
-
-            <a
-              href="https://www.linkedin.com/in/younes-noufli-aab87b218/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >LinkedIn ↗</a>
-
-            <a
-              href="https://drive.google.com/file/d/1kKypxUzSLVt_GO_9X96dJujinNV_JUaj/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-            >Curriculum Vitae ↗</a>
-
-            <!-- Add your GitHub profile URL here when ready. -->
-          </div>
-        </div>
-
-        <!-- Optional: replace this block with your own photograph. -->
-        <!-- Example:
-        <img
-          src="images/profile.jpg"
-          alt="Portrait of Younes Noufli"
-          class="portrait"
-        >
-        -->
-        <div class="portrait-placeholder" aria-hidden="true">
-          Profile photo<br>optional
-        </div>
+        <h5>About</h5>
+        <p>
+          I am an engineering student at ENSIAS, after two years of CPGE in mathematics and physics.
+          I work on machine learning, mostly on language models: how they fail, how to measure those
+          failures honestly, and what can be fixed at decoding time. I also play competitive chess
+          (FIDE 2000), which is where a few of my projects come from.
+        </p>
       </div>
 
-      <!-- RESEARCH INTERESTS -->
+      <div class="five columns">
+        <img src="profile.jpg" alt="Younes Noufli" style="width: 100%; border-radius: 4px;">
+      </div>
+    </div>
 
-      <section id="research">
-        <div class="section-heading">
-          <div class="section-number">01 / Research</div>
-          <h2>Research interests</h2>
-        </div>
+    <div class="row">
+      <div class="twelve columns">
 
-        <div class="section-content">
-          <p>
-            I am interested in understanding how machine learning systems
-            learn useful representations of the world, and how mathematical
-            structure can inform their design.
-          </p>
-
-          <div class="interest-list">
-            <span class="tag">Representation Learning</span>
-            <span class="tag">Geometric Deep Learning</span>
-            <span class="tag">Group Theory & Symmetry</span>
-            <span class="tag">Deep Learning</span>
-            <span class="tag">LLMs & Reasoning</span>
-          </div>
-
-          <p class="note">
-            These are current interests and directions I want to explore,
-            rather than claims of established research contributions.
-          </p>
-        </div>
-      </section>
-
-      <!-- SELECTED PROJECTS -->
-
-      <section id="projects">
-        <div class="section-heading">
-          <div class="section-number">02 / Selected work</div>
-          <h2>Projects</h2>
-        </div>
-
-        <div class="section-content">
-
-          <article class="project">
-            <div class="project-header">
-              <h3>Chess Position Analysis</h3>
-              <span class="meta">Machine Learning · Computer Vision</span>
-            </div>
-
-            <p>
-              Explored machine learning approaches to chess, including
-              Elo-rating regression with XGBoost, Ridge Regression and
-              Random Forest, as well as a CNN-based approach to position
-              analysis.
-            </p>
-
-            <p>
-              The CNN work involved approximately 588,000 chess positions
-              and 20 tactical themes, with around 758 detections out of
-              1,000 in the reported evaluation.
-            </p>
-
-            <div class="project-links">
-              <!-- Replace with the actual repository or report URL. -->
-              <span class="muted">Repository / report link to add</span>
-            </div>
-          </article>
-
-          <article class="project">
-            <div class="project-header">
-              <h3>Medical AI</h3>
-              <span class="meta">Machine Learning · Evaluation</span>
-            </div>
-
-            <p>
-              Worked on a medical AI project documented in a technical
-              report. A key focus was model performance on severe cases,
-              for which the reported F1-score doubled during the project.
-            </p>
-
-            <p class="note">
-              The exact dataset, baseline and evaluation protocol should
-              accompany this result in the project report.
-            </p>
-
-            <div class="project-links">
-              <!-- Replace with the actual report or repository URL. -->
-              <span class="muted">Report / repository link to add</span>
-            </div>
-          </article>
-
-          <article class="project">
-            <div class="project-header">
-              <h3>LLM-Powered Detective Game</h3>
-              <span class="meta">Unity · Large Language Models</span>
-            </div>
-
-            <p>
-              Developed a detective-game concept in Unity using an LLM
-              to support interactions with non-player characters.
-              The game design involved approximately six NPCs per case,
-              creating opportunities for conversational investigation.
-            </p>
-
-            <div class="project-links">
-              <!-- Replace with the actual repository or demo URL. -->
-              <span class="muted">Repository / demo link to add</span>
-            </div>
-          </article>
-
-          <article class="project">
-            <div class="project-header">
-              <h3>Game AI with Genetic Algorithms</h3>
-              <span class="meta">Python · Evolutionary Algorithms</span>
-            </div>
-
-            <p>
-              Explored game-agent development using a genetic algorithm
-              in Pygame, alongside experimentation with Bonsai and an
-              8-billion-parameter language model.
-            </p>
-
-            <div class="project-links">
-              <!-- Replace with the actual repository or report URL. -->
-              <span class="muted">Repository / report link to add</span>
-            </div>
-          </article>
-
-        </div>
-      </section>
-
-      <!-- EXPERIENCE -->
-
-      <section id="experience">
-        <div class="section-heading">
-          <div class="section-number">03 / Experience</div>
-          <h2>Professional experience</h2>
-        </div>
-
-        <div class="section-content">
-
-          <div class="timeline-item">
-            <div class="timeline-date">Jul – Sep 2024</div>
-
-            <div>
-              <h3>Data Analyst Intern</h3>
-              <p class="muted">Bewize · Technopark, Casablanca, Morocco</p>
-
-              <p>
-                Built dashboards in Metabase using PostgreSQL data to
-                monitor platform activity, including users, completed
-                courses, sessions and questions. Worked on KPI reporting,
-                geographic visualizations and interactive filters.
-              </p>
-
-              <p>
-                Also contributed to an AI-related project involving
-                Swiss-system chess pairings.
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- EDUCATION -->
-
-      <section id="education">
-        <div class="section-heading">
-          <div class="section-number">04 / Education</div>
-          <h2>Education</h2>
-        </div>
-
-        <div class="section-content">
-
-          <div class="timeline-item">
-            <div class="timeline-date">Sep 2024 – Jun 2027</div>
-
-            <div>
-              <h3>Engineering degree — Data Science</h3>
-              <p class="muted">
-                ENSIAS · Mohammed V University, Rabat, Morocco
-              </p>
-
-              <p>
-                Engineering studies focused on data science, data
-                engineering and machine learning.
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-date">2022 – 2024</div>
-
-            <div>
-              <h3>Classes Préparatoires aux Grandes Écoles</h3>
-              <p class="muted">Mathematics, Physics and Computer Science</p>
-
-              <p>
-                Intensive preparation in mathematics, physics and
-                computer science for French-style engineering-school
-                entrance examinations.
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- SKILLS -->
-
-      <section id="skills">
-        <div class="section-heading">
-          <div class="section-number">05 / Technical profile</div>
-          <h2>Skills</h2>
-        </div>
-
-        <div class="section-content">
-
-          <div class="skill-row">
-            <div class="skill-label">Programming</div>
-            <p class="skill-value">Python, SQL</p>
-          </div>
-
-          <div class="skill-row">
-            <div class="skill-label">Data science</div>
-            <p class="skill-value">
-              pandas, scikit-learn, statistical analysis,
-              machine learning
-            </p>
-          </div>
-
-          <div class="skill-row">
-            <div class="skill-label">Deep learning</div>
-            <p class="skill-value">PyTorch, convolutional neural networks</p>
-          </div>
-
-          <div class="skill-row">
-            <div class="skill-label">Data & tools</div>
-            <p class="skill-value">
-              PostgreSQL, Metabase, Docker, Unity
-            </p>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- CONTACT -->
-
-      <section id="contact">
-        <div class="section-heading">
-          <div class="section-number">06 / Contact</div>
-          <h2>Get in touch</h2>
-        </div>
-
-        <div class="section-content">
-          <p>
-            I am interested in opportunities in data science, machine
-            learning and AI research, including research-oriented
-            internships and final-year projects.
-          </p>
-
-          <p>
-            <a href="mailto:younes_noufli@um5.ac.ma">
-              younes_noufli@um5.ac.ma
+        <hr>
+        <h5>Research &amp; projects</h5>
+        <ul>
+          <li>
+            <strong><span class="title-highlight">Degenerative repetition in language models</span></strong>.
+            <i><span class="status-highlight">Completed, Sep. 2026</span>.</i>
+            <br>Research internship at ENSIAS, supervised by Prof. Boutaina Hdioud.
+            <br>A triggered repetition penalty: a multi-scale detector gates the standard penalty so it
+            only fires when the model actually starts looping. It matches the industry-standard penalty
+            on both repetition and fluency while leaving the logits untouched 40% of the time.
+            The second half of the work showed that anti-repetition decoding does not remove repetition
+            but displaces it from the lexical to the semantic level &mdash; a failure mode standard
+            n-gram metrics cannot see &mdash; and established why a hidden-state detector for it is valid
+            in aggregate but not as a per-case decision signal.
+            <a class="hidelink" href="https://drive.google.com/file/d/1a1hD4plW8EO3V1P1bIu-xlDYgkN9Zqd5/view?usp=sharing">
+              <span class="button-link">Technical report</span>
             </a>
-          </p>
+          </li>
 
-          <p>
-            <a
-              href="https://www.linkedin.com/in/younes-noufli-aab87b218/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >Connect on LinkedIn ↗</a>
-          </p>
-        </div>
-      </section>
+          <li>
+            <strong><span class="title-highlight">Chest X-ray report generation with margin-based DPO</span></strong>.
+            <i><span class="status-highlight">Ongoing</span>.</i>
+            <br>A missed urgent finding costs far more than a clumsy sentence, so the preference objective
+            should not treat both the same. A Direct Preference Optimization variant with an asymmetric
+            margin penalizes critical diagnostic errors more heavily than benign ones. Qwen2-VL fine-tuned
+            with SFT and DPO under a 6&nbsp;GB VRAM budget, preference data built from MIMIC-CXR,
+            clinical evaluation via CheXbert. Doubled the F1 score on urgent cases.
+            <a class="hidelink" href="https://drive.google.com/file/d/1soAv3Jhp2s8NEFPb_H5I_yQCbwPB2eQy/view?usp=sharing">
+              <span class="button-link">Technical report</span>
+            </a>
+          </li>
 
-    </main>
+          <li>
+            <strong><span class="title-highlight">Chess coaching platform</span></strong>.
+            <i><span class="status-highlight">Ongoing</span>.</i>
+            <br>Team project. Most chess tools train tactics; this one targets strategy, which nothing
+            covers well. I built the analytics engine: rating prediction from raw game histories
+            (stacked XGBoost, Ridge, Random Forest), a CNN trained on 588k positions to detect
+            20 tactical patterns, and playing-style embeddings learned by inverse reinforcement
+            learning over 24 strategic patterns.
+          </li>
 
-    <footer class="footer">
-      <span>© 2026 Younes Noufli</span>
-      <span>Built with HTML & CSS · Hosted on GitHub Pages</span>
-    </footer>
+          <li>
+            <strong><span class="title-highlight">Multi-agent octopus simulation</span></strong>.
+            <i><span class="status-highlight">Personal project</span>.</i>
+            <br>Three independently-controlled appendages, each with its own reactive policy,
+            coordinated by a quantized 1-bit LLM acting as a high-level planner. Deadlocks between
+            agents were resolved through an emergent peer-to-peer channel; locomotion trained with
+            a GPU-batched genetic algorithm.
+          </li>
+        </ul>
 
+        <hr>
+        <h5>Experience</h5>
+        <ul>
+          <li>
+            <strong>ENSIAS, Mohammed V University | Research intern</strong>
+            <br><span class="meta">Rabat, Jul. &ndash; Sep. 2026</span>
+            <br>Repetition in language models, supervised by Prof. Boutaina Hdioud. See above.
+          </li>
+          <li>
+            <strong>Bewize | Data analyst intern</strong>
+            <br><span class="meta">Technopark, Casablanca, Aug. &ndash; Sep. 2025</span>
+            <br>SQL extraction and aggregation of operational data; built a Metabase dashboard
+            tracking temporal KPIs, delivered as a prototype for management review.
+          </li>
+        </ul>
+
+        <hr>
+        <h5>Teaching &amp; community</h5>
+        <ul>
+          <li>
+            <strong>Math&amp;Maroc</strong> &mdash; active member, since Dec. 2024
+            <br>Moroccan NGO promoting mathematics and science. Co-organized MDM 2025
+            (1,250 attendees) and MDM 2026 (1,600+ attendees); currently contributing to the
+            strategic planning of MDM 2027.
+            <a class="hidelink" href="https://mdm.mathmaroc.org/">
+              <span class="button-link">MDM</span>
+            </a>
+          </li>
+          <li>
+            <strong>ENSIAS Chess Club</strong> &mdash; president, 2025&ndash;2026
+            <br>Weekly coaching sessions and internal tournaments. Previously founded and led
+            the same club at high school. FIDE-rated 2000.
+          </li>
+        </ul>
+
+        <hr>
+        <h5>Tools</h5>
+        <p>
+          Python (PyTorch, scikit-learn, pandas), SQL, Git.
+          Familiar with R, Java, C, C#.
+          French and Arabic (native), English (professional).
+        </p>
+
+      </div>
+    </div>
   </div>
 </body>
 </html>
